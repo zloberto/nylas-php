@@ -1,0 +1,22 @@
+{
+    "name": "zloberto/nylas-php",
+    "description": "A PHP wrapper for Nylas v3 API.",
+    "license": "MIT",
+
+    "require": {
+        "ext-curl": "*"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "Zloberto\\Nylas\\": "src/"
+        }
+    },
+    
+    "authors": [
+        {
+            "name": "Roberto Repić",
+            "email": "roberto.repic@icloud.com"
+        }
+    ]
+}
