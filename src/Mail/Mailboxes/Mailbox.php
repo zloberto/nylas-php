@@ -1,6 +1,6 @@
 <?php
 
-namespace Zloberto\Nylas\Mail;
+namespace Zloberto\Nylas\Mail\Mailbox;
 
 use Zloberto\Nylas\Auth\Grant;
 use Zloberto\Nylas\Mail\Enums\Fields;
@@ -14,6 +14,11 @@ abstract class Mailbox
 	 * @var Grant Authorization grant used for accessing mailbox data.
 	 */
 	protected Grant $grant;
+
+	public function __construct(Grant $grant)
+	{
+		$this->grant = $grant;
+	}
 
 	/**
 	 * Retrieve a list of messages with optional filters.
@@ -38,7 +43,7 @@ abstract class Mailbox
 	 * @return mixed
 	 */
 	abstract public function getAllMessages(
-		?int $limit = 50,
+		int $limit = 50,
 		?string $page_token = null,
 		?string $select = null,
 		?string $subject = null,

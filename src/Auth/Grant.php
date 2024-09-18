@@ -204,6 +204,16 @@ class Grant
 	}
 
 	/**
+	 * Get the grant type.
+	 *
+	 * @return GrantType Grant type.
+	 */
+	public function getGrantType(): GrantType
+	{
+		return $this->grant_type;
+	}
+
+	/**
 	 * Serialize the grant object to an array.
 	 *
 	 * @return array The serialized array representation of the grant object.
